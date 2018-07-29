@@ -2,7 +2,7 @@
 
 
 ## 1. Output of pizza menu
-
+![pizza menu](https://user-images.githubusercontent.com/38566315/43363704-5c512578-9328-11e8-82cc-4da799dce256.png)
 [Visit Code](https://github.com/sawrupesh04/AngularJs/tree/master/Pizza%20Menu)
 
 
