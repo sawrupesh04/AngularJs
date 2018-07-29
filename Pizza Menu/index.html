@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Tony's Pizza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+
+<body ng-controller="menuController">
+    <div class="container">
+
+        <div ng-style='manualStyle'>
+            <h1>Rupesh's Pizza</h1>
+        </div>
+        <h2>{{model.title}}</h2>
+        <div>
+            <label for=""><input type="radio" name="category" ng-click="changeMainDish('Cheess Pizza', '$13.33')"/>Cheess Pizza</label>
+        </div>
+        <div>
+                <label for=""><input type="radio" name="category" ng-click="changeMainDish('Pepperoni Pizza', '$17.99')"/> Pepperoni Pizza</label>
+        </div>
+        <div>
+                <label for=""><input type="radio" name="category" ng-click="changeMainDish('Margherita Pizza', '$11.99')"/> Margherita Pizza</label>
+        </div>
+        <div>
+                <label for=""><input type="radio" name="category" ng-click="changeMainDish('BBQ Pizza', '$19.99')"/>BBQ Chicken Pizza</label>
+        </div>
+        <div>
+                <label for=""><input type="radio" name="category" ng-click="changeMainDish('Combo Pizza', '$29.99')"/>Combo Pizza</label>
+        </div>
+
+
+        <div>
+            <h3>Selected Dish</h3>
+            <pre>{{model.mainDish}}</pre>
+        </div>
+
+        <div>
+            <h3>Special Instruction</h3>
+            <textarea class="form-control" ng-model="model.specialInstructions"></textarea>
+        </div>
+
+        <div>
+            <h3>Order summary</h3>
+            <pre>{{model.mainDish}} {{ model.cost }} -> {{model.specialInstructions}}</pre>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/menuConroller.js"></script>
+</body>
+
+</html>
